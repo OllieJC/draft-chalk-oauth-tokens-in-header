@@ -31,6 +31,8 @@ author:
 
 normative:
   RFC6749:
+  RFC7615:
+  RFC9110:
 
 informative:
 
@@ -45,7 +47,21 @@ This specification extends OAuth 2.0 {{RFC6749}} by defining a mechanism for res
 
 # Introduction
 
-TODO Introduction
+OAuth deployments vary widely, from simple bearer-only systems to distributed architectures with separate authorisation servers and resource servers.
+
+In some of these environments, a resource server may have enough context to provide updated token information or indicate a more appropriate token for future use.
+
+However, existing OAuth flows require separate interactions with the authorisation server to obtain updated tokens or metadata.
+
+Some deployments may not have an authorisation server at all, yet still benefit from a way to signal preferred or refreshed token state to clients.
+
+This specification introduces a lightweight mechanism for conveying inline token updates using the `Authentication-Info` header originally defined in {{RFC7615}} and now in {{RFC9110}}.
+
+It operates entirely within the existing HTTP response, without modifying the client's request or diverting it into an alternative token retrieval process.
+
+Clients interpret the conveyed values as hints rather than strict directives, maintaining compatibility with current OAuth behaviour.
+
+The result is an optional optimisation that improves efficiency and flexibility across diverse deployment models.
 
 
 # Conventions and Definitions
