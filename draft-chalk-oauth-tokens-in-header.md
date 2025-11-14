@@ -25,9 +25,9 @@ venue:
 
 author:
  -
-    fullname: "OllieJC"
-    organization: Your Organization Here
-    email: "5426038+OllieJC@users.noreply.github.com"
+    fullname: "Ollie Chalk"
+    organization: "Government Digital Service, UK"
+    email: "ollie.chalk@dsit.gov.uk"
 
 normative:
 
@@ -37,7 +37,7 @@ informative:
 
 --- abstract
 
-TODO Abstract
+This specification extends OAuth 2.0 {{RFC6749}} by defining a mechanism for resource servers or authorisation servers to convey inline token updates and related metadata to clients using the `Authentication-Info` HTTP header.
 
 
 --- middle
