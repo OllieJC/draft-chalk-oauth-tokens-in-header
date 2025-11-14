@@ -5,9 +5,9 @@
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
 <title>TODO - Your title</title>
-<meta content="OllieJC" name="author">
+<meta content="Ollie Chalk" name="author">
 <meta content="
-       TODO Abstract 
+       This specification extends OAuth 2.0   by defining a mechanism for resource servers or authorisation servers to convey inline token updates and related metadata to clients using the  Authentication-Info  HTTP header. 
     " name="description">
 <meta content="xml2rfc 3.31.0" name="generator">
 <meta content="next generation" name="keyword">
@@ -1048,8 +1048,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <td class="right">November 2025</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">OllieJC</td>
-<td class="center">Expires 17 May 2026</td>
+<td class="left">Chalk</td>
+<td class="center">Expires 18 May 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1062,17 +1062,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-chalk-oauth-tokens-in-header-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-11-13" class="published">13 November 2025</time>
+<time datetime="2025-11-14" class="published">14 November 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-05-17">17 May 2026</time></dd>
+<dd class="expires"><time datetime="2026-05-18">18 May 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
-      <div class="author-name">OllieJC</div>
-<div class="org">Your Organization Here</div>
+      <div class="author-name">O. Chalk</div>
+<div class="org">Government Digital Service, UK</div>
 </div>
 </dd>
 </dl>
@@ -1080,7 +1080,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">TODO - Your title</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">TODO Abstract<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This specification extends OAuth 2.0 <span>[<a href="#RFC6749" class="cite xref">RFC6749</a>]</span> by defining a mechanism for resource servers or authorisation servers to convey inline token updates and related metadata to clients using the <code>Authentication-Info</code> HTTP header.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1117,7 +1117,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1216,6 +1216,10 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC6749">[RFC6749]</dt>
+      <dd>
+<span class="refAuthor">Hardt, D., Ed.</span>, <span class="refTitle">"The OAuth 2.0 Authorization Framework"</span>, <span class="seriesInfo">RFC 6749</span>, <span class="seriesInfo">DOI 10.17487/RFC6749</span>, <time datetime="2012-10" class="refDate">October 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6749">https://www.rfc-editor.org/rfc/rfc6749</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
     <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
@@ -1237,11 +1241,11 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
       </h2>
 <address class="vcard">
-        <div dir="auto" class="left"><span class="fn nameRole">OllieJC</span></div>
-<div dir="auto" class="left"><span class="org">Your Organization Here</span></div>
+        <div dir="auto" class="left"><span class="fn nameRole">Ollie Chalk</span></div>
+<div dir="auto" class="left"><span class="org">Government Digital Service, UK</span></div>
 <div class="email">
 <span>Email:</span>
-<a href="mailto:5426038+OllieJC@users.noreply.github.com" class="email">5426038+OllieJC@users.noreply.github.com</a>
+<a href="mailto:ollie.chalk@dsit.gov.uk" class="email">ollie.chalk@dsit.gov.uk</a>
 </div>
 </address>
 </section>

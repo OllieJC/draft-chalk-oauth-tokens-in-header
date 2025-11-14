@@ -2,10 +2,10 @@
 
 
 
-Web Authorization Protocol                                       OllieJC
-Internet-Draft                                    Your Organization Here
-Intended status: Informational                          13 November 2025
-Expires: 17 May 2026
+Web Authorization Protocol                                      O. Chalk
+Internet-Draft                            Government Digital Service, UK
+Intended status: Informational                          14 November 2025
+Expires: 18 May 2026
 
 
                            TODO - Your title
@@ -13,7 +13,10 @@ Expires: 17 May 2026
 
 Abstract
 
-   TODO Abstract
+   This specification extends OAuth 2.0 [RFC6749] by defining a
+   mechanism for resource servers or authorisation servers to convey
+   inline token updates and related metadata to clients using the
+   Authentication-Info HTTP header.
 
 About This Document
 
@@ -48,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 May 2026.
+   This Internet-Draft will expire on 18 May 2026.
 
 Copyright Notice
 
@@ -101,6 +104,10 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
 
+   [RFC6749]  Hardt, D., Ed., "The OAuth 2.0 Authorization Framework",
+              RFC 6749, DOI 10.17487/RFC6749, October 2012,
+              <https://www.rfc-editor.org/rfc/rfc6749>.
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
@@ -111,6 +118,6 @@ Acknowledgments
 
 Author's Address
 
-   OllieJC
-   Your Organization Here
-   Email: 5426038+OllieJC@users.noreply.github.com
+   Ollie Chalk
+   Government Digital Service, UK
+   Email: ollie.chalk@dsit.gov.uk
