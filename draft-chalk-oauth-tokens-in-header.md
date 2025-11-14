@@ -1,7 +1,6 @@
 ---
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
-category: info
+title: "OAuth Tokens in HTTP Header"
+category: std
 
 docname: draft-chalk-oauth-tokens-in-header-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
@@ -12,9 +11,10 @@ v: 3
 area: "Security"
 workgroup: "Web Authorization Protocol"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - HTTP header
+ - Authentication-Info
+ - inline updates
+ - bearer tokens
 venue:
   group: "Web Authorization Protocol"
   type: "Working Group"
