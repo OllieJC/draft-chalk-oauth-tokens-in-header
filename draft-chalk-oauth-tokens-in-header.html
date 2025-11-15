@@ -1050,7 +1050,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Chalk</td>
-<td class="center">Expires 18 May 2026</td>
+<td class="center">Expires 19 May 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1063,12 +1063,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-chalk-oauth-tokens-in-header-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-11-14" class="published">14 November 2025</time>
+<time datetime="2025-11-15" class="published">15 November 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-05-18">18 May 2026</time></dd>
+<dd class="expires"><time datetime="2026-05-19">19 May 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1118,7 +1118,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 18 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 19 May 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1177,14 +1177,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">OAuth deployments vary widely, from simple bearer-only systems to distributed architectures with separate authorisation servers and resource servers.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">In some of these environments, a resource server may have enough context to provide updated token information or indicate a more appropriate token for future use.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">However, existing OAuth flows require separate interactions with the authorisation server to obtain updated tokens or metadata.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">Some deployments may not have an authorisation server at all, yet still benefit from a way to signal preferred or refreshed token state to clients.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">This specification introduces a lightweight mechanism for conveying inline token updates using the <code>Authentication-Info</code> header originally defined in <span>[<a href="#RFC7615" class="cite xref">RFC7615</a>]</span> and now in <span>[<a href="#RFC9110" class="cite xref">RFC9110</a>]</span>.<a href="#section-1-5" class="pilcrow">¶</a></p>
-<p id="section-1-6">It operates entirely within the existing HTTP response, without modifying the client's request or diverting it into an alternative token retrieval process.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">Clients interpret the conveyed values as hints rather than strict directives, maintaining compatibility with current OAuth behaviour.<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">The result is an optional optimisation that improves efficiency and flexibility across diverse deployment models.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<p id="section-1-1">OAuth deployments range from simple bearer‑only configurations to complex ecosystems with distinct authorisation and resource servers. In some scenarios a resource server holds enough contextual information to advise the client of a refreshed or more suitable token for future use. Existing OAuth flows, however, obligate the client to perform a separate interaction with the authorisation server to obtain such updates, and certain deployments may lack an authorisation server altogether.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">This document defines a lightweight mechanism that leverages the <code>Authentication‑Info</code> header (originally specified in <span>[<a href="#RFC7615" class="cite xref">RFC7615</a>]</span> and incorporated into <span>[<a href="#RFC9110" class="cite xref">RFC9110</a>]</span>) to convey inline token updates and associated metadata within a normal HTTP response. The header can be processed transparently by HTTP implementations, potentially even at a proxy or edge service, and does not alter the client's request semantics. Recipients treat the conveyed values as hints - they may adopt the suggested token but are not required to do so - thereby preserving compatibility with existing OAuth behaviour while offering an optional optimisation for efficiency and flexibility.<a href="#section-1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
