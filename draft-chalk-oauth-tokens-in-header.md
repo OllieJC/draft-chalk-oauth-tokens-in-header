@@ -47,21 +47,9 @@ This specification extends OAuth 2.0 {{RFC6749}} by defining a mechanism for res
 
 # Introduction
 
-OAuth deployments vary widely, from simple bearer-only systems to distributed architectures with separate authorisation servers and resource servers.
+OAuth deployments range from simple bearer‑only configurations to complex ecosystems with distinct authorisation and resource servers. In some scenarios a resource server holds enough contextual information to advise the client of a refreshed or more suitable token for future use. Existing OAuth flows, however, obligate the client to perform a separate interaction with the authorisation server to obtain such updates, and certain deployments may lack an authorisation server altogether.
 
-In some of these environments, a resource server may have enough context to provide updated token information or indicate a more appropriate token for future use.
-
-However, existing OAuth flows require separate interactions with the authorisation server to obtain updated tokens or metadata.
-
-Some deployments may not have an authorisation server at all, yet still benefit from a way to signal preferred or refreshed token state to clients.
-
-This specification introduces a lightweight mechanism for conveying inline token updates using the `Authentication-Info` header originally defined in {{RFC7615}} and now in {{RFC9110}}.
-
-It operates entirely within the existing HTTP response, without modifying the client's request or diverting it into an alternative token retrieval process.
-
-Clients interpret the conveyed values as hints rather than strict directives, maintaining compatibility with current OAuth behaviour.
-
-The result is an optional optimisation that improves efficiency and flexibility across diverse deployment models.
+This document defines a lightweight mechanism that leverages the `Authentication‑Info` header (originally specified in {{RFC 7615}} and incorporated into {{RFC 9110}}) to convey inline token updates and associated metadata within a normal HTTP response. The header can be processed transparently by HTTP implementations, potentially even at a proxy or edge service, and does not alter the client's request semantics. Recipients treat the conveyed values as hints - they may adopt the suggested token but are not required to do so - thereby preserving compatibility with existing OAuth behaviour while offering an optional optimisation for efficiency and flexibility.
 
 
 # Conventions and Definitions
